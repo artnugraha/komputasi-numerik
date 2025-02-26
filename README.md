@@ -3,7 +3,7 @@
 Catatan kuliah komputasi numerik.
 
 - Modul 1: Pendahuluan
-  - Persiapan komputer
+  - [Persiapan komputer](Modul01/01-1-Persiapan-Komputer.md)
   - Jupyter Notebook, Markdown, dan LaTeX
   - Seputar Aproksimasi dan Galat
 

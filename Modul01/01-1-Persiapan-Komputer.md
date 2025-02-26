@@ -1,6 +1,6 @@
-Dalam mata kuliah ini, peserta perlu menginstal lingkungan pemrograman Python dengan *virtual environment* yang menyertakan pustaka NumPy, SciPy, SymPy, dan Matplotlib. Editor yang akan digunakan adalah VS Code dengan *extension* yang menunjang penyuntingan dalam *Jupyter Notebook* (format berkas `.ipynb`) serta *Markdown* (format berkas `*.md`). Petunjuk instalasi lengkap di bawah ini diberikan untuk sistem operasi Windows. 
+Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python dengan *virtual environment* yang menyertakan pustaka NumPy, SciPy, SymPy, dan Matplotlib. Editor yang akan digunakan adalah VS Code dengan *extension* yang menunjang penyuntingan dalam *Jupyter Notebook* (format berkas `.ipynb`) serta *Markdown* (format berkas `*.md`). Petunjuk instalasi lengkap di bawah ini diberikan untuk sistem operasi Windows. 
 
-### Langkah 1: Instal Python via Microsoft Store
+### Langkah 1: Instalasi Python via Microsoft Store
 1. **Buka Microsoft Store**:
    - Tekan tombol **Start**, cari **Microsoft Store**, dan buka aplikasinya.
 
@@ -8,16 +8,16 @@ Dalam mata kuliah ini, peserta perlu menginstal lingkungan pemrograman Python de
    - Di dalam Microsoft Store, ketik "Python" pada panel pencarian.
    - Pilih **Python 3.x** (saran: Python 3.11) dari hasil pencarian.
 
-3. **Instal Python**:
+3. **Instalasi Python**:
    - Klik **Get** atau **Install** untuk mengunduh dan menginstal Python dari Microsoft Store.
    - Setelah instalasi selesai, Python akan tersedia di sistem kita.
 
 4. **Verifikasi Instalasi Python**:
-   - Buka **Command Prompt** dan ketik perintah berikut untuk memeriksa apakah Python telah terinstal dengan benar:
+   - Buka **Command Prompt** dan ketik perintah berikut untuk memeriksa apakah Python telah terinstalasi dengan benar:
      ```bash
      python --version
      ```
-   - Jika berhasil, kita akan melihat versi Python yang baru saja diinstal.
+   - Jika berhasil, kita akan melihat versi Python yang baru saja dipasang.
 
 ---
 
@@ -25,7 +25,7 @@ Dalam mata kuliah ini, peserta perlu menginstal lingkungan pemrograman Python de
 1. **Unduh VS Code**: 
    - Kunjungi [situs resmi VS Code](https://code.visualstudio.com/Download) dan unduh versi Windows.
 
-2. **Instal VS Code**:
+2. **Instalasi VS Code**:
    - Jalankan file unduhan dan ikuti langkah-langkah instalasi.
    - Dalam proses instalasi, pastikan untuk memilih opsi berikut:
      - **Add to PATH** (menambahkan VS Code ke PATH).
@@ -41,7 +41,7 @@ Dalam mata kuliah ini, peserta perlu menginstal lingkungan pemrograman Python de
 1. **Unduh Git untuk Windows**: 
    - Kunjungi [situs Git](https://git-scm.com/download/win) dan unduh versi Windows.
 
-2. **Instal Git**:
+2. **Instalasi Git**:
    - Jalankan installer dan ikuti langkah-langkah instalasi.
    - Pilih opsi untuk menginstal Git Bash.
    - Pilih opsi *default* selama proses instalasi jika kita tidak ingin pusing.
@@ -51,8 +51,8 @@ Dalam mata kuliah ini, peserta perlu menginstal lingkungan pemrograman Python de
 
 ---
 
-### Langkah 4: Instal Python dan Jupyter Extensions di VS Code
-1. **Instal Python Extension**:
+### Langkah 4: Instalasi Python dan Jupyter Extensions di VS Code
+1. **Instalasi Python Extension**:
    - Di VS Code, buka **Extensions View** yang secara *default* ada di panel sebelah kiri vertikal (coba cek satu per satu), atau bisa juga dengan langsung menekan `Ctrl + Shift + X`.
    - Cari **Python Extension Pack** (*from Don Jayamanne*) dan klik **Install**.   
    - Setelah Python Extension terinstal, cari **Jupyter** (*from Microsoft*) dan pilih **Install**. Dengan ekstensi ini, kita nanti dapat menjalankan berbagai Jupyter notebook yang dibuat dalam perkuliahan, secara langsung di dalam VS Code.
@@ -87,10 +87,10 @@ Dalam mata kuliah ini, peserta perlu menginstal lingkungan pemrograman Python de
 
 ---
 
-### Langkah 7: Install Paket yang Dibutuhkan dalam Virtual Environment
+### Langkah 7: Instalasi Paket yang Dibutuhkan dalam Virtual Environment
 
-1. **Install Paket dengan `pip`**:
-   - Sekarang, dengan venv aktif di Git Bash Terminal di dalam VS Code kita, instal pustaka yang akan kita butuhkan, meliputi **NumPy**, **SciPy**, **SymPy**, **Matplotlib**, dan **Jupyter**, menggunakan perintah `pip`:
+1. **Instalasi Paket dengan `pip`**:
+   - Sekarang, dengan venv aktif di Git Bash Terminal di dalam VS Code kita, lakukan instalasi pustaka yang akan kita butuhkan, meliputi **NumPy**, **SciPy**, **SymPy**, **Matplotlib**, dan **Jupyter**, menggunakan perintah `pip`:
      ```bash
      pip install numpy scipy sympy matplotlib jupyter
      ```
