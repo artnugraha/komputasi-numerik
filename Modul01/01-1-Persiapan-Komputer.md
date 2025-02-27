@@ -32,30 +32,30 @@ Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python
      - **Register Code as an editor for supported file types**.
      - **Install 'code' command in PATH** (untuk membuka VS Code dari terminal).
 
-3. **Buka VS Code**: 
-   Setelah instalasi selesai, buka VS Code.
+3. **Verifikasi Instalasi VS Code**: 
+   Setelah instalasi, verifikasi VS Code dengan membukanya melalui Start Menu. Jika sudah bisa dibuka, boleh ditutup lagi.
 
 ---
 
-### Langkah 3: Install Git Bash
+### Langkah 3: Instalasi Git Bash
 1. **Unduh Git untuk Windows**: 
    - Kunjungi [situs Git](https://git-scm.com/download/win) dan unduh versi Windows.
 
 2. **Instalasi Git**:
    - Jalankan installer dan ikuti langkah-langkah instalasi.
-   - Pilih opsi untuk menginstal Git Bash.
+   - Pilih opsi untuk menginstalasi Git Bash.
    - Pilih opsi *default* selama proses instalasi jika kita tidak ingin pusing.
 
 3. **Verifikasi Git Bash**: 
-   Setelah Git terinstal, verifikasi Git Bash sudah terinstal dengan membuka Git Bash melalui Start Menu.
+   Setelah Git terinstal, verifikasi Git Bash sudah terinstalasi dengan membuka Git Bash melalui Start Menu. Jika sudah bisa dibuka, boleh ditutup lagi.
 
 ---
 
 ### Langkah 4: Instalasi Python dan Jupyter Extensions di VS Code
 1. **Instalasi Python Extension**:
-   - Di VS Code, buka **Extensions View** yang secara *default* ada di panel sebelah kiri vertikal (coba cek satu per satu), atau bisa juga dengan langsung menekan `Ctrl + Shift + X`.
+   - Buka kembali VS Code dan di dalamnya cek menu **Extensions** yang secara *default* ada di panel sebelah kiri vertikal (coba cek satu per satu), atau bisa juga dengan langsung menekan `Ctrl + Shift + X`.
    - Cari **Python Extension Pack** (*from Don Jayamanne*) dan klik **Install**.   
-   - Setelah Python Extension terinstal, cari **Jupyter** (*from Microsoft*) dan pilih **Install**. Dengan ekstensi ini, kita nanti dapat menjalankan berbagai Jupyter notebook yang dibuat dalam perkuliahan, secara langsung di dalam VS Code.
+   - Setelah Python Extension terinstalasi, cari **Jupyter** (*from Microsoft*) dan pilih **Install**. Dengan ekstensi ini, kita nanti dapat menjalankan berbagai Jupyter notebook yang dibuat dalam perkuliahan, secara langsung di dalam VS Code.
 
 ---
 
@@ -66,23 +66,28 @@ Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python
 
 2. **Pilih Terminal Git Bash di VS Code**:
    - Di VS Code, buka terminal dengan menekan `Ctrl + ~` (atau pilih **Terminal > New Terminal** dari menu).
-   - Di bagian atas terminal, klik pada dropdown yang menunjukkan terminal default (misalnya, PowerShell atau Command Prompt), kemudian pilih **Git Bash**.
-   - Jika Git Bash belum ada dalam pilihan, klik **Select Default Profile**, dan pilih **Git Bash** dari daftar.
-
+   - Di bagian panel terminal, klik pada *dropdown* (arah panah bawah) yang menunjukkan terminal *default* (misalnya, PowerShell atau Command Prompt), kemudian pilih **Git Bash**. 
+   ![Pilihan Terminal](../img/vscode-terminal-selection.png)
+   - Ilustrasi di bawah ini untuk komputer yang menggunakan Linux yang sudah *default*-nya Bash (label 1).
+   ![Default Terminal](../img/vscode-terminal-profile.png)
+   Jika Bash belum menjadi *default*, perlu klik **Select Default Profile** (label 2), dan pilih **Git Bash** dari daftar. 
 ---
 
-### Langkah 6: Instalasi Virtual Environment
+### Langkah 6: Instalasi *Virtual Environment* (venv)
 
 1. **Pilih Folder Kerja Aktif**
    - Di VS Code, dari menu `File`, pilih `Open Folder` dan buat Folder baru untuk bekerja sepanjang mata kuliah ini, misalnya diberi nama `kelas-teko`. 
 
 2. **Buat Virtual Environment (venv)**:
    - Klik ikon berupa ular di panel sebelah kiri yang merupakan Python Environment Manager. Dari sana, di bawah bagian `Global Environments` semestinya kita dapat melihat opsi `Venv`. 
-   - Klik tanda + dengan kursor mouse untuk `Create Environment`. Kita akan diminta memilih `workspace` untuk `environment` ini, bisa pilih *default*-nya yang semestinya berasal dari instalasi Python sebelumnya. 
+   ![Venv](../img/vscode-venv.png)
+   - Klik tanda + dengan kursor mouse untuk `Create Environment`. Kita akan diminta memilih `workspace` untuk `environment` ini dan Python *interpreter*  yang sesuai. Bisa pilih versi Python yang berasal dari instalasi Python sebelumnya. 
+   ![Venv Creation](../img/vscode-venv-create.png)
    - Tunggu beberapa saat sampai inisialisasi Python Environment selesai.
 
 3. **Konfigurasi Virtual Environment**:
-   - Setelah virtual environment dibuat, kita dapat melihatnya sebagai salah satu opsi di bawah panah Global Environments dan `Venv`. Aktifkan `Venv` ini dengan klik dua gambar ikon yang tiba-tiba muncul, yakni (1) `Open in Terminal` dan (2) `Set as active workspace interpreter`
+   - Setelah virtual environment dibuat, kita dapat melihatnya sebagai salah satu opsi di bawah panah Global Environments dan `Venv`. Aktifkan `Venv` ini dengan klik dua gambar ikon yang tiba-tiba muncul, yakni (1) `Open in Terminal` (ikon terminal) dan (2) `Set as active workspace interpreter` (ikon bintang).
+   ![Venv Terminal](../img/vscode-venv-term.png)
    - Jika berhasil, terminal Git Bash kita akan menunjukkan bahwa venv aktif dengan melihat `(venv)` di awal prompt.
 
 ---
@@ -90,7 +95,7 @@ Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python
 ### Langkah 7: Instalasi Paket yang Dibutuhkan dalam Virtual Environment
 
 1. **Instalasi Paket dengan `pip`**:
-   - Sekarang, dengan venv aktif di Git Bash Terminal di dalam VS Code kita, lakukan instalasi pustaka yang akan kita butuhkan, meliputi **NumPy**, **SciPy**, **SymPy**, **Matplotlib**, dan **Jupyter**, menggunakan perintah `pip`:
+   - Sekarang, dengan venv aktif di Git Bash Terminal di dalam VS Code kita, lakukan instalasi pustaka yang akan kita butuhkan, meliputi **NumPy**, **SciPy**, **SymPy**, **Matplotlib**, dan **Jupyter**, menggunakan perintah `pip`. Baris perintah di bawah ini dapat disalin ke Terminal Bash.
      ```bash
      pip install numpy scipy sympy matplotlib jupyter
      ```
