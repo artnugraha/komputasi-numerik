@@ -21,7 +21,7 @@ Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python
 
 ---
 
-### Langkah 2: Instal Visual Studio Code (VS Code)
+### Langkah 2: Instalasi Visual Studio Code (VS Code)
 1. **Unduh VS Code**: 
    - Kunjungi [situs resmi VS Code](https://code.visualstudio.com/Download) dan unduh versi Windows.
 
