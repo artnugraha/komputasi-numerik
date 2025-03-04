@@ -221,102 +221,17 @@ Jika \( \delta x/x \) dan \( \delta y/y \) sama-sama kecil (misalnya, sebesar \(
 
 ---
 
-## Deret Taylor dan Orde Aproksimasi
-
-Deret Taylor juga penting untuk memahami orde aproksimasi. Deret Taylor menyajikan fungsi \( f(x) \) sebagai jumlah tak hingga suku polinomial yang dihitung berdasarkan turunan fungsi pada titik tertentu \( a \):
-
-\[
-f(x) = f(a) + f'(a)(x-a) + \frac{f''(a)}{2!}(x-a)^2 + \frac{f'''(a)}{3!}(x-a)^3 + \cdots.
-\]
-
-Dalam praktiknya, kita hanya mengambil sejumlah suku terbatas. Misalnya, untuk fungsi \(\sin(x)\) di sekitar \( x=0 \):
-
-\[
-\sin(x) \approx x - \frac{x^3}{6}.
-\]
-
 ### Notasi Big-O dan Estimasi Galat
-Notasi Big-O digunakan untuk menyatakan orde galat yang tersisa setelah aproksimasi. Jika deret Taylor dipotong setelah orde \( n \), maka sisa galat adalah:
+Notasi Big-O digunakan untuk menyatakan orde galat yang tersisa setelah aproksimasi. Untuk deret Taylor, jika kita potong deret setelah orde \( n \), sisa galat adalah:
 
 \[
 R_{n+1}(x) = O((x-a)^{n+1}).
 \]
 
-Sebagai contoh, untuk \(\sin(x)\):
+Sebagai contoh, kita potong deret Taylor untuk \(\sin(x)\):
 
 \[
 \sin(x) = x - \frac{x^3}{6} + O(x^5),
 \]
 
-yang menunjukkan bahwa sisa galat berorde \( x^5 \) saat \( x \) mendekati 0.
-
----
-
-## 5. Integrasi Konsep: Studi Kasus dan Strategi Pengendalian Galat
-
-### 5.1 Studi Kasus: Aproksimasi Fungsi Eksponensial
-Pertimbangkan fungsi \( e^x \) yang didekati dengan deret Taylor:
-
-\[
-e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \cdots.
-\]
-
-Menggunakan tiga suku pertama menghasilkan:
-
-\[
-T_2(x) = 1 + x + \frac{x^2}{2}.
-\]
-
-Galat pemotongan diestimasikan sebagai:
-
-\[
-R_3(x) = \frac{e^\xi}{3!}x^3 \quad \text{dengan} \quad 0 \leq \xi \leq x.
-\]
-
-Sementara itu, galat pembulatan harus diperhitungkan dalam setiap operasi aritmetika, terutama untuk nilai \( x \) yang sangat kecil atau sangat besar.
-
-### 5.2 Strategi Pengendalian Galat
-- **Peningkatan Presisi:**  
-  Menggunakan tipe data dengan presisi ganda (64-bit) untuk mengurangi galat pembulatan.
-
-- **Desain Algoritma yang Stabil:**  
-  Memilih algoritma yang meminimalkan akumulasi operasi aritmetika berulang, seperti penerapan pivoting dalam eliminasi Gauss.
-
-- **Penggunaan Machine Epsilon dalam Proses Iteratif:**  
-  Dalam metode iteratif (misalnya, Newton-Raphson), machine epsilon digunakan sebagai kriteria penghentian ketika perubahan antar iterasi kurang dari \( \varepsilon \), menandakan konvergensi.
-
-- **Analisis Sensitivitas:**  
-  Menguji dampak perubahan kecil pada input terhadap output untuk memastikan kestabilan dan robustitas algoritma.
-
-- **Optimasi Deret Aproksimasi:**  
-  Menentukan jumlah suku optimal dalam deret Taylor guna menyeimbangkan antara galat pemotongan dan beban komputasi.
-
----
-
-## 6. Kesimpulan
-
-Pemahaman mendalam tentang representasi bilangan, analisis galat, dan aproksimasi deret merupakan fondasi penting dalam metode numerik. Poin-poin utama yang perlu diingat meliputi:
-
-- **Urgensi Metode Numerik:**  
-  Menyediakan solusi praktis untuk masalah kompleks yang tidak dapat diselesaikan secara analitik, dengan memanfaatkan algoritma iteratif dan teknik aproksimasi.
-
-- **Representasi Bilangan dan Machine Epsilon:**  
-  Format floating-point memiliki keterbatasan presisi. Machine epsilon (\( \varepsilon \)) menunjukkan batas ketelitian perhitungan, berfungsi sebagai tolok ukur untuk mengendalikan galat pembulatan dan menentukan kriteria konvergensi dalam proses iteratif.
-
-- **Deret Taylor dalam Komputasi:**  
-  Selain digunakan untuk mendekati fungsi non-linear, deret Taylor juga diimplementasikan dalam pustaka pemrograman untuk menghitung nilai-nilai irasional dengan akurasi yang diinginkan.
-
-- **Analisis Galat:**  
-  - *Galat Pembulatan:* Dibatasi oleh \( \varepsilon \) dan dihitung secara relatif.
-  - *Galat Pemotongan:* Dapat diestimasi dengan bentuk Lagrange dan dinyatakan secara asimtotik sebagai \( O((x-a)^{n+1}) \).
-  - *Galat Total dan Perambatan Galat:* Merupakan akumulasi dari berbagai sumber kesalahan yang perlu dikendalikan agar hasil perhitungan mendekati nilai eksak.
-
-- **Notasi Big-O:**  
-  Menyediakan kerangka untuk mengukur seberapa cepat galat berkurang seiring dengan penambahan suku pada deret Taylor.
-
-- **Strategi Pengendalian Galat:**  
-  Melalui peningkatan presisi, algoritma yang stabil, penggunaan machine epsilon dalam iterasi, dan analisis sensitivitas, solusi numerik yang dihasilkan dapat dipertahankan dalam batas toleransi yang dapat diterima.
-
-Dengan integrasi konsep-konsep tersebut, mahasiswa dan praktisi di bidang komputasi dapat merancang algoritma yang efisien, akurat, dan mampu mengendalikan kesalahan perhitungan, sehingga solusi yang diperoleh dapat diandalkan untuk berbagai aplikasi di bidang sains dan rekayasa.
-
----
+yang menunjukkan bahwa sisa galat berorde \( x^5 \) saat \( x \) mendekati 0. Secara umum, semakin tinggi nilai pangkat dalam notasi Big-O ini maka semakin tinggi ketelitian hasil metode numerik tersebut.
