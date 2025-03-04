@@ -1,11 +1,11 @@
- # Komputasi Numerik
+  # Komputasi Numerik
 
 Catatan kuliah komputasi numerik.
 
 - Modul 1: Pendahuluan
   - [Persiapan komputer](Modul01/01-1-Persiapan-Komputer.md)
   - [Jupyter Notebook, Markdown, dan LaTeX](Modul01/01-2-Menulis-Catatan.ipynb)
-  - Seputar Aproksimasi dan Galat
+  - [Seputar Aproksimasi dan Galat](Modul01/01-3-Aproksimasi-Galat.ipynb)
 
 - Modul 2: Pemrograman Dasar dalam Python
   - Bilangan dan Variabel
