@@ -183,10 +183,116 @@ Untuk keperluan pelajaran kita, ada beberapa konfigurasi yang mesti dilakukan. I
 
 ---
 
-### Langkah 2: Pastikan sudah punya akun GitHub dan membuat repositori
+### Langkah 2: Buat `token` untuk interaksi komputer lokal dan GitHub
 
-1. **Akses situs web GitHub**:
-   - Buka situs web https://github.com
-   - Login dengan akun masing-masing. Jika belum punya akun GitHub, buat dulu dengan mengikuti petunjuk yang ada di situsnya.
+1. **Cari Developer Settings**:
+   - Dimulai dari klik gambar profil GitHub kita di pojok kanan atas situs GitHub, ada pilihan `Settings`.
+   - Setelah itu, akan ada beberapa menu yang berpindah ke panel sebelah kiri, *scroll* ke bawah sebelah kiri akan tampak `Developer settings`.
 
-2. 
+2. **Pembuatan token**:
+   - Pilih `Personal access tokens` &rarr; `Tokens (classic)`.
+   - Agak geser ke sebelah kanan, ada pilihan `Generate new token` yang bisa diklik. Kemudian, pilih `Generate new token (classic)`.
+   - `Note` atau catatan dapat diisi bebas, misalnya "Token untuk kelas teko" (tanpa tanda kutip). 
+   - `Expiration` atau masa berlaku disarankan untuk diatur `Custom` 1 tahun dengan menulis tanggal setahun setelah hari ini dalam format mm/dd/yyyy (misal: 03/05/2026 artinya 5 Maret 2026)
+   - `Select scopes` maksudnya adalah memilih cakupan `token` ini, kita bisa centang semuanya saja untuk kemudahan (walau tidak terlalu aman, kita bukan *programmer* terkenal yang diincar *hacker* yang jahat)
+   - Setelah memilih semua `scopes` yang sesuai, di bagian bawah kita bisa klik tombol `Generate token` (biasanya berlatar belakang hijau).
+
+3. **Token harus langsung disimpan**:
+   - Begitu `token` muncul dari langkah sebelumnya, kita harus segera menyalinnya ke tempat yang aman. Contoh `token` semacam ini:
+      ```
+      ghp_92OcO9FyFzYmfmW5LZYzGO6S3N6Voq1UjyGr
+      ```
+      
+---
+
+### Langkah 3: Buat berkas konfigurasi Git
+
+1. **Akses folder `home` atau `user` masing-masing**:
+   - Dari VS Code, kita dapat membuka folder akun pengguna kita masing-masing melalui menu `File` &rarr; `Open Folder`.
+   - Standar di Windows biasanya folder pengguna beralamat di `C:\Users\nama-pengguna`. Cari folder semacam itu dan kalau sudah ketemu bisa klik `Select` serta `Open`.
+   
+2. **Buat dua berkas (*files*) baru untuk konfigurasi Git**:
+   - Dari panel Explorer di VS Code, kita dapat memilih `New file ` untuk membuat berkas baru yang berada dalam folder `C:\Users\nama-pengguna`. 
+   - Dua berkas baru yang perlu dibuat harus memiliki nama yang tidak boleh keliru sedikitpun huruf demi hurufnya, yakni
+     - `.gitconfig`
+     - `.git-credentials`
+     
+     Perhatikan bahwa kedua berkas tersebut diawali tanda titik (`.`) yang bukan merupakan suatu kekeliruan, memang begitu penamaannya. 
+
+3. **Isian `.gitconfig`**:
+   - Pada Explorer VS Code, kita klik `.gitconfig` yang sudah dibuat untuk kita edit langsung dengan isian seperti di bawah.
+
+      ```yaml
+      [user]
+         name = Nama Lengkap Masing Masing
+         email = alamat@penyediaemail.com
+      [credential]
+         helper = store
+      [core]
+         autocrlf = input
+      ```
+   - Bagian `name` dan `email` sesuaikan dengan punya masing-masing. Kemudian, simpan (*save*) `.gitconfig`.
+
+4. **Isian `.git-credentials`**:
+   - Pada Explorer VS Code, klik `.gitconfig` yang sudah dibuat untuk kita edit langsung dengan format seperti di bawah.
+
+      ```yaml
+      https://usernamegithub:token@github.com
+      ```
+   - Misal `usernamegithub` adalah `artnugraha` dengan token `ghp_92OcO9FyFzYmfmW5LZYzGO6S3N6Voq1UjyGr`, isian `.gitconfig` ini menjadi:
+
+      ```yaml
+      https://artnugraha:ghp_92OcO9FyFzYmfmW5LZYzGO6S3N6Voq1UjyGr@github.com
+      ```
+   - Jangan lupa simpan (*save*) berkas tersebut.
+
+---
+
+### Langkah 4: Klon dan Sinkronisasi Repositori
+
+1. **Buka ulang folder `kelas-teko`**:
+   - Asumsikan kita sudah membuat folder `kelas-teko` di `C:\Users\nama-pengguna\kelas-teko`, kita bisa buka ulang dengan mengakses menu `File` &rarr; `Open Folder` di VS Code dan mengarahkan ke alamat folder tersebut.
+   - Di dalam folder ini kita akan melakukan klon repositori dari situs GitHub.
+
+2. **Buka Terminal dengan `venv` yang sesuai**:
+   - Klik ikon berupa ular di panel sebelah kiri yang merupakan Python Environment Manager. Dari sana, di bawah bagian `Global Environments` semestinya kita dapat melihat opsi `Venv`.
+   - Aktifkan `Venv` ini dengan klik dua gambar ikon yang tiba-tiba muncul, yakni (1) `Open in Terminal` (ikon terminal) dan (2) `Set as active workspace interpreter` (ikon bintang).
+
+3. **Operasi `git` dalam terminal**
+   - Di dalam terminal, kita dapat mengetik beberapa perintah penting `git` untuk klon dan sinkronisasi repositori.
+   - Untuk klon repositori kita yang sudah dibuat di GitHub, misal beralamat di https://github.com/usernamegithub/kelas-teko, kita tulis satu baris perintah   
+      ```bash
+      git clone https://github.com/usernamegithub/kelas-teko
+      ```
+   - Setelah eksekusi perintah di atas, kita akan mendapati ada folder baru muncul di Explorer VS Code dengan nama `kelas-teko`. Untuk membedakan dari folder utama yang mungkin namanya terlanjur sama `kelas-teko`, kita bisa ganti nama (`Rename`) folder yang baru muncul ini dengan cara klik kanan dan pilih `Rename` untuk foldernya menjadi `GitHub-Repo`. Ini dengan asumsi bahwa proses sinkronisasi berkas pelajaran hanya akan dilakukan di dalam folder tersebut.
+   - Setelah penggantian nama folder, kita bisa membuat contoh berkas baru di dalamnya, misalnya `nguliq.ipynb`. Ini adalah berkas Jupyter Notebook yang akan kita sinkronisasi ke repositori GitHub.
+   - Di dalam `nguliq.ipynb`, kita bisa tulis beberapa baris kode Python. Misalnya:
+      ```python
+      import numpy as np
+      y = np.sin(np.pi/2)
+      print(y)
+      ```
+   - Simpan (`Save`) berkas tersebut dan sekarang kita beralih ke terminal.
+   - Dalam Terminal, kita tambahkan berkas `nguliq.ipynb` ke dalam rangkaian sinkronisasi via perintah-perintah `git` berikut ini.
+      
+      ```bash
+      git add nguliq.ipynb
+      ```
+      ```bash
+      git commit -m 'tugas ke-0'
+      ```
+
+      ```bash
+      git push
+      ```
+   - Tiga baris perintah di atas akan 'mengirimkan' berkas `nguliq.ipynb` versi lokal untuk sinkronisasi ke situs web github.com yang beralamat pada repositori yang telah kita buat sebelumnya (misal: https://github.com/usernamegithub/kelas-teko).
+   - Ketika kita diminta untuk berbagi kode ke repositori oleh kolaborator, kita dapat melakukan 3 rangkaian perintah yang sama seperti di atas, tinggal mengganti berkas yang sesuai dan pesan `commit` yang menunjukkan catatan revisi.
+   - Selain tiga rangkaian perintah di atas, satu lagi perintah `git` paling populer yang penting diketahui adalah
+   
+      ```bash
+      git pull
+      ```
+   - Perintah `git pull` ini bahkan biasanya dilakukan paling duluan (sebelum 3 rangkaian perintah sinkronisasi tadi) jika kita baru "bangun tidur" dan baru membuka komputer di waktu kerja berikutnya. Siapa tahu kolaborator kita sudah mengerjakan sesuatu di repositori, kita perlu 'menarik' hasil editan kolaborator kita itu dan menggabungkannya ke versi lokal kita.
+   - Untuk belajar lebih lengkap seputar Git, kita dapat mengakses tutorial yang komprehensif seputar Git bagi pemula di situs [Software Carpentry](https://swcarpentry.github.io/git-novice/instructor/index.html)
+
+   
