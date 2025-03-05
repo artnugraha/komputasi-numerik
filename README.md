@@ -1,4 +1,4 @@
-  # Komputasi Numerik
+   # Komputasi Numerik
 
 Catatan kuliah komputasi numerik.
 
@@ -8,7 +8,7 @@ Catatan kuliah komputasi numerik.
   - [Seputar Aproksimasi dan Galat](Modul01/01-3-Aproksimasi-Galat.ipynb)
 
 - Modul 2: Pemrograman Dasar dalam Python
-  - Bilangan dan Variabel
+  - [Bilangan dan Variabel](Modul02/02-1-bilangan-variabel.ipynb)
   - Barisan dan Deret
   - Evaluasi Fungsi
   - Konstruksi Logika dan Perulangan
