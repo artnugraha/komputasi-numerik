@@ -264,7 +264,7 @@ Untuk keperluan pelajaran kita, ada beberapa konfigurasi yang mesti dilakukan. I
       ```bash
       git clone https://github.com/usernamegithub/kelas-teko
       ```
-   - Setelah eksekusi perintah di atas, kita akan mendapati ada folder baru muncul di Explorer VS Code dengan nama `kelas-teko`. Untuk membedakan dari folder utama yang mungkin namanya terlanjur sama `kelas-teko`, kita bisa ganti nama (`Rename`) folder yang baru muncul ini dengan cara klik kanan dan pilih `Rename` untuk foldernya menjadi `GitHub-Repo`. Ini dengan asumsi bahwa proses sinkronisasi berkas pelajaran hanya akan dilakukan di dalam folder tersebut.
+   - Setelah eksekusi perintah di atas, kita akan mendapati ada folder baru muncul di Explorer VS Code dengan nama `kelas-teko`. Untuk membedakan dari folder utama yang mungkin namanya terlanjur sama `kelas-teko`, kita bisa ganti nama (`Rename`) folder yang baru muncul ini dengan cara klik kanan dan pilih `Rename` untuk foldernya menjadi `GitHub-Tugas`. Ini dengan asumsi bahwa proses sinkronisasi berkas pelajaran hanya akan dilakukan di dalam folder tersebut.
    - Setelah penggantian nama folder, kita bisa membuat contoh berkas baru di dalamnya, misalnya `nguliq.ipynb`. Ini adalah berkas Jupyter Notebook yang akan kita sinkronisasi ke repositori GitHub.
    - Di dalam `nguliq.ipynb`, kita bisa tulis beberapa baris kode Python. Misalnya:
       ```python
@@ -273,7 +273,13 @@ Untuk keperluan pelajaran kita, ada beberapa konfigurasi yang mesti dilakukan. I
       print(y)
       ```
    - Simpan (`Save`) berkas tersebut dan sekarang kita beralih ke terminal.
-   - Dalam Terminal, kita tambahkan berkas `nguliq.ipynb` ke dalam rangkaian sinkronisasi via perintah-perintah `git` berikut ini.
+   - Dalam Terminal, kita perlu masuk dulu ke folder `GitHub-Tugas` dengan perintah
+      ```bash
+      cd GitHub-Tugas
+      ```
+      atau nama folder lain yang tadi kita lakukan perubahan namanya saat mengakses folder tersebut. Hati-hati dengan ukuran huruf besar-kecilnya.
+
+   - Setelah itu, tambahkan berkas `nguliq.ipynb` ke dalam rangkaian sinkronisasi via perintah-perintah `git` berikut ini.
       
       ```bash
       git add nguliq.ipynb
