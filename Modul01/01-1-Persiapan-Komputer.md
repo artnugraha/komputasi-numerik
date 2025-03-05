@@ -1,4 +1,8 @@
-Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python dengan *virtual environment* yang menyertakan pustaka NumPy, SciPy, SymPy, dan Matplotlib. Editor yang akan digunakan adalah VS Code dengan *extension* yang menunjang penyuntingan dalam *Jupyter Notebook* (format berkas `.ipynb`) serta *Markdown* (format berkas `*.md`). Petunjuk instalasi lengkap di bawah ini diberikan untuk sistem operasi Windows. 
+Dalam pelajaran ini, kita akan menginstalasi lingkungan pemrograman Python dengan *virtual environment* yang menyertakan pustaka NumPy, SciPy, SymPy, dan Matplotlib. Editor yang akan digunakan adalah VS Code dengan *extension* yang menunjang penyuntingan dalam *Jupyter Notebook* (format berkas `.ipynb`) serta *Markdown* (format berkas `*.md`). Petunjuk instalasi lengkap di bawah ini diberikan untuk sistem operasi Windows. 
+
+Selain instalasi perangkat lunak, kita akan belajar secara ringkas prosedur pengiriman berkas-berkas (*files*) yang kita edit di komputer lokal kita ke server repositori seperti [GitHub](https://github.com) dengan menggunakan perintah `git`.
+
+---
 
 ### Langkah 1: Instalasi Python via Microsoft Store
 1. **Buka Microsoft Store**:
@@ -17,7 +21,22 @@ Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python
      ```bash
      python --version
      ```
+   - Jika berhasil, kita akan melihat versi Python yang baru saja dipasang. Jika perintah tersebut tidak berhasil dieksekusi, bisa mencoba langkah alternatif instalasi Python dengan mengunduh penginstalasi dari situs pengembang Python.
+
+### Langkah 1 Alternatif: Instalasi Python dari Situs Web Pengembang
+1. **Unduh Penginstalasi Python**
+   - Kunjungi [situs resmi pengembang Python](https://www.python.org/downloads/windows/) dan unduh Python (saran: Python 3.13.2 versi stabil termutakhir atau Python 3.11.11) untuk Windows.
+
+2. **Instalasi Python**
+   - Buka *installer* Python dan pilih opsi-opsi *default*-nya, terutama terkait pilihan menambahkan Python ke dalam PATH harus dipastikan disertakan.
+
+3. **Verifikasi Instalasi Python**:
+   - Buka **Command Prompt** dan ketik
+     ```bash
+     python --version
+     ```
    - Jika berhasil, kita akan melihat versi Python yang baru saja dipasang.
+
 
 ---
 
@@ -76,7 +95,7 @@ Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python
 ### Langkah 6: Instalasi *Virtual Environment* (venv)
 
 1. **Pilih Folder Kerja Aktif**
-   - Di VS Code, dari menu `File`, pilih `Open Folder` dan buat Folder baru untuk bekerja sepanjang mata kuliah ini, misalnya diberi nama `kelas-teko`. 
+   - Di VS Code, dari menu `File`, pilih `Open Folder` dan buat Folder baru untuk pelajaran ini, misalnya diberi nama `kelas-teko`. 
 
 2. **Buat Virtual Environment (venv)**:
    - Klik ikon berupa ular di panel sebelah kiri yang merupakan Python Environment Manager. Dari sana, di bawah bagian `Global Environments` semestinya kita dapat melihat opsi `Venv`. 
@@ -86,7 +105,7 @@ Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python
    - Tunggu beberapa saat sampai inisialisasi Python Environment selesai.
 
 3. **Konfigurasi Virtual Environment**:
-   - Setelah virtual environment dibuat, kita dapat melihatnya sebagai salah satu opsi di bawah panah Global Environments dan `Venv`. Aktifkan `Venv` ini dengan klik dua gambar ikon yang tiba-tiba muncul, yakni (1) `Open in Terminal` (ikon terminal) dan (2) `Set as active workspace interpreter` (ikon bintang).
+   - Setelah *virtual environment* dibuat, kita dapat melihatnya sebagai salah satu opsi di bawah panah Global Environments dan `Venv`. Aktifkan `Venv` ini dengan klik dua gambar ikon yang tiba-tiba muncul, yakni (1) `Open in Terminal` (ikon terminal) dan (2) `Set as active workspace interpreter` (ikon bintang).
    ![Venv Terminal](../img/vscode-venv-term.png)
    - Jika berhasil, terminal Git Bash kita akan menunjukkan bahwa venv aktif dengan melihat `(venv)` di awal prompt.
 
@@ -101,23 +120,23 @@ Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python
      ```
 
 2. **Verifikasi Instalasi**:
-   - Kita dapat memverifikasi bahwa pustaka telah diinstal dengan menjalankan:
+   - Kita dapat memverifikasi bahwa pustaka telah diinstalasi dengan menjalankan:
      ```bash
      pip list
      ```
-   - Ini akan menampilkan semua pustaka yang telah diinstal di dalam virtual environment kita.
+   - Ini akan menampilkan semua pustaka yang telah diinstalasi di dalam *virtual environment* kita.
 
 ---
 
 ### Langkah 8: Menggunakan Virtual Environment di VS Code
 
 1. **Pilih Interpreter Python di VS Code**:
-   - Setelah virtual environment (venv) aktif, tekan `Ctrl + Shift + P` di VS Code untuk membuka **Command Palette**.
+   - Setelah *virtual environment* (venv) aktif, tekan `Ctrl + Shift + P` di VS Code untuk membuka **Command Palette**.
    - Ketik dan pilih **Python: Select Interpreter**.
    - Pilih interpreter Python yang ada di dalam folder `venv`. kita akan melihat sesuatu seperti `./venv/Scripts/python` pada daftar pilihan.
 
 2. **Verifikasi di VS Code**:
-   - Pastikan bahwa interpreter Python yang aktif di VS Code adalah interpreter dari virtual environment (venv) yang baru saja kita buat.
+   - Pastikan bahwa interpreter Python yang aktif di VS Code adalah interpreter dari *virtual environment* (venv) yang baru saja kita buat.
    - Coba buat atau buka file Python `.py` maupun Jupyter Notebook `.ipynb` untuk memastikan semuanya berjalan dengan baik.
 
 ---
@@ -128,7 +147,46 @@ Dalam mata kuliah ini, peserta perlu menginstalasi lingkungan pemrograman Python
    - Di dalam VS Code, kita bisa membuat file baru dengan ekstensi `.ipynb` untuk membuat Jupyter Notebook baru, atau buka notebook yang sudah ada.
    
 2. **Pilih Kernel Jupyter**:
-   - Setelah membuka file `.ipynb`, pilih kernel Jupyter yang terhubung dengan virtual environment (venv). Pilih **Python Kernel** yang sesuai dari pilihan kernel yang muncul di bagian atas notebook.
+   - Setelah membuka file `.ipynb`, pilih kernel Jupyter yang terhubung dengan *virtual environment* (venv). Pilih **Python Kernel** yang sesuai dari pilihan kernel yang muncul di bagian atas notebook.
    
 3. **Mulai Menulis dan Menjalankan Kode**:
-   - Sekarang kita dapat menulis dan menjalankan kode Python di Jupyter Notebook di dalam VS Code, dengan menggunakan pustaka yang telah diinstal (NumPy, SciPy, SymPy, Matplotlib, Jupyter).
+   - Sekarang kita dapat menulis dan menjalankan kode Python di Jupyter Notebook di dalam VS Code dengan menggunakan pustaka yang telah diinstalasi (NumPy, SciPy, SymPy, Matplotlib, Jupyter).
+
+---
+
+## Berinteraksi dengan Git dan GitHub
+
+GitHub merupakan salah satu situs web yang menyediakan repositori (tempat penyimpanan) gratis bagi penggunanya untuk berbagi berkas, terutama kode dan data secara terbuka kepada publik maupun secara tertutup kepada kolaborator dalam komunitas tertutup. Proses berbagi berkas ini dapat dilakukan melalui perintah-perintah `git`. 
+
+Untuk keperluan pelajaran kita, ada beberapa konfigurasi yang mesti dilakukan. Ini dimulai dari membuat repositori di situs web GitHub,  mengatur akses pengguna dan "token" interaksi antara komputer lokal (laptop kita misalnya) dengan server GitHub, hingga sinkronisasi repositori di komputer lokal kita dengan server GitHub.  
+
+---
+
+### Langkah 1: Pastikan sudah punya akun GitHub dan membuat repositori
+
+1. **Akses situs web GitHub**:
+   - Buka situs web https://github.com
+   - Login dengan akun masing-masing. Jika belum punya akun GitHub, buat dulu dengan mengikuti petunjuk yang ada di situsnya.
+
+2. **Buat repositori pelajaran jika belum punya**:
+   - Pilih tab `Repositories` atau menu `Your Repositories` dari profil pengguna kita, biasanya bisa diakses di **pojok kanan atas** jika membuka di versi *desktop*.
+   - Klik tombol `New`, biasanya berlatar belakang warna hijau untuk membuat repositori baru. 
+   - Pada bagian `Repository name` bisa tulis nama repositori yang kita inginkan, misalnya `kelas-teko`.
+   - Berikan `Description` ringkas seperti: "Tempat menaruh tugas pelajaran komputasi numerik" (ditulis tanpa tanda petik).
+   - Sifat repositori dapat dipilih sebagai repositori `Private` untuk keperluan pelajaran ini.
+   - Opsi lainnya boleh dikerjakan maupun tidak. Misalnya, jika kita ingin ada berkas `README` sebagai awalan pengisi repositori, kita dapat centang opsi **Add a Readme file**.
+   - Kalau sudah puas, klik `Create repository`
+
+3. **Menambah kolaborator**
+   - Pada langkah berikutnya, kolaborator kita dapat ditambahkan sebagai pengakses repositori dengan memilih `Invite collaborators` ketika ada tampilan `Add collaborators to this repository` 
+   - Tergantung dari konfigurasi akun GitHub kita, kadang akan diminta untuk login kembali. Setelah itu, kita bisa `Add people` sebagai kolaborator dan mengetik nama akun yang perlu ditambah. Untuk pelajaran ini kita dapat mengundang anggota kelompok masing-masing dan akun `artnugraha` (atau email art.nugraha@gmail.com) sebagai kolaborator.
+
+---
+
+### Langkah 2: Pastikan sudah punya akun GitHub dan membuat repositori
+
+1. **Akses situs web GitHub**:
+   - Buka situs web https://github.com
+   - Login dengan akun masing-masing. Jika belum punya akun GitHub, buat dulu dengan mengikuti petunjuk yang ada di situsnya.
+
+2. 
