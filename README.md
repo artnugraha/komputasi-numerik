@@ -9,10 +9,10 @@ Catatan kuliah komputasi numerik.
 
 - Modul 2: Pemrograman Dasar dalam Python
   - [Bilangan dan Variabel](Modul02/02-1-bilangan-variabel.ipynb)
-  - Barisan dan Deret
-  - Evaluasi Fungsi
-  - Konstruksi Logika dan Perulangan
-  - Pustaka NumPy dan Matplotlib
+  - [Barisan dan Deret](Modul02/02-2-barisan-deret.ipynb)
+  - [Evaluasi Fungsi](Modul02/02-3-evaluasi-fungsi.ipynb)
+  - [Konstruksi Logika dan Perulangan](Modul02/02-4-logika-perulangan.ipynb)
+  - [Pustaka NumPy dan Matplotlib](Modul02/02-5-Pustaka-Python.ipynb)
 
 - Modul 3: Akar-Akar Persamaan
   - Metode Bagi Dua
