@@ -1,4 +1,4 @@
-   # Komputasi Numerik
+## Komputasi Numerik
 
 Catatan kuliah komputasi numerik.
 
@@ -6,6 +6,7 @@ Catatan kuliah komputasi numerik.
   - [Persiapan komputer](Modul01/01-1-Persiapan-Komputer.md)
   - [Jupyter Notebook, Markdown, dan LaTeX](Modul01/01-2-Menulis-Catatan.ipynb)
   - [Seputar Aproksimasi dan Galat](Modul01/01-3-Aproksimasi-Galat.ipynb)
+  - [Tugas Modul 1](Modul01/01-Tugas.ipynb)
 
 - Modul 2: Pemrograman Dasar dalam Python
   - [Bilangan dan Variabel](Modul02/02-1-bilangan-variabel.ipynb)
@@ -13,6 +14,7 @@ Catatan kuliah komputasi numerik.
   - [Evaluasi Fungsi](Modul02/02-3-evaluasi-fungsi.ipynb)
   - [Konstruksi Logika dan Perulangan](Modul02/02-4-logika-perulangan.ipynb)
   - [Pustaka NumPy dan Matplotlib](Modul02/02-5-Pustaka-Python.ipynb)
+  - [Tugas Modul 2](Modul02/02-Tugas.ipynb)
 
 - Modul 3: Akar-Akar Persamaan
   - Metode Bagi Dua
