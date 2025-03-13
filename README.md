@@ -17,12 +17,11 @@ Catatan kuliah komputasi numerik.
   - [Tugas Modul 2](Modul02/02-Tugas.ipynb)
 
 - Modul 3: Akar-Akar Persamaan
-  - Metode Bagi Dua
+  - [Metode Bagi Dua](Modul03/03-1-metode-bagi-dua.ipynb)
   - Metode Regula Falsi
-  - Metode Iterasi Titik Tetap
   - Metode Newton
   - Metode Secant
-  - Sistem Persamaan Nonlinear
+  - [Tugas Modul 3](Modul03/03-Tugas.ipynb)
 
 - Modul 4: Aljabar Linear
 - Modul 5: Interpolasi dan Regresi
