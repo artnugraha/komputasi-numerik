@@ -19,7 +19,7 @@ Catatan kuliah komputasi numerik.
 - Modul 3: Akar-Akar Persamaan
   - [Metode Bagi Dua](Modul03/03-1-metode-bagi-dua.ipynb)
   - Metode Regula Falsi
-  - Metode Newton
+  - [Metode Newton](Modul03/03-2-metode-newton.ipynb)
   - Metode Secant
   - [Tugas Modul 3](Modul03/03-Tugas.ipynb)
 
