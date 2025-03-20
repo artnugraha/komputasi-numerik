@@ -24,6 +24,13 @@ Catatan kuliah komputasi numerik.
   - [Tugas Modul 3](Modul03/03-Tugas.ipynb)
 
 - Modul 4: Aljabar Linear
+  - [Dasar Aljabar Linear](Modul04/04-1-dasar-aljabar-linear.ipynb)
+  - [Sistem Persamaan Linear](Modul04/04-2-sistem-persamaan-linear.ipynb)
+  - [Metode Eliminasi dan Dekomposisi](Modul04/04-3-metode-gauss-dekomposisi-LU.ipynb)
+  - [Metode Iteratif Gauss-Seidel](Modul04/04-4-metode-gauss-seidel.ipynb)
+  - [Pengayaan: Inversi Matriks](Modul04/04-5-pengayaan-inversi-matriks.ipynb)
+  - [Tugas Modul 4](Modul04/04-Tugas.ipynb)
+  
 - Modul 5: Interpolasi dan Regresi
 - Modul 6: Integrasi Numerik
 - Modul 7: Turunan Numerik
