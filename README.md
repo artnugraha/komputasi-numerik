@@ -39,7 +39,7 @@ Catatan kuliah komputasi numerik.
   
 - Modul 6: Integrasi Numerik
   - [Dasar Integral Numerik: Jumlahan Riemann](Modul06/06-1-Dasar-Integral-Numerik-Riemann.ipynb)
-  - Aturan Trapezoid dan Simpson
+  - [Aturan Trapezoid dan Simpson](Modul06/06-2-Aturan-Trapesium-dan-Simpson.ipynb)
   - Pustaka SciPy
   - Tugas Modul 6
 - Modul 7: Turunan Numerik
