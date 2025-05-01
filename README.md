@@ -35,7 +35,7 @@ Catatan kuliah komputasi numerik.
   - [Metode Regresi Kuadrat Terkecil](Modul05/05-1-Regresi-Kuadrat-Terkecil.ipynb)
   - [Interpolasi Linear, Kuadratik, dan Kubik](Modul05/05-2-Interpolasi-Dasar.ipynb)
   - [Interpolasi Lagrange dan Newton](Modul05/05-3-Interpolasi-Lagrange-dan-Newton.ipynb)
-  - Tugas Modul 5
+  - [Tugas Modul 5](Modul05/05-Tugas.ipynb)
   
 - Modul 6: Integrasi Numerik
 - Modul 7: Turunan Numerik
