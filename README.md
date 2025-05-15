@@ -40,9 +40,9 @@ Catatan kuliah komputasi numerik.
 - Modul 6: Integrasi Numerik
   - [Dasar Integral Numerik: Jumlahan Riemann](Modul06/06-1-Dasar-Integral-Numerik-Riemann.ipynb)
   - [Aturan Trapezoid dan Simpson](Modul06/06-2-Aturan-Trapesium-dan-Simpson.ipynb)
-  - Pustaka SciPy
-  - Tugas Modul 6
+  
 - Modul 7: Turunan Numerik
+  - [Metode Beda Hingga](Modul07/07-1-Beda-Hingga.ipynb)
 - Modul 8: Persamaan Diferensial
 - Modul 9: Transformasi Fourier
 - Modul 10: Pembelajaran Mesin
