@@ -44,5 +44,6 @@ Catatan kuliah komputasi numerik.
 - Modul 7: Turunan Numerik
   - [Metode Beda Hingga](Modul07/07-1-Beda-Hingga.ipynb)
 - Modul 8: Persamaan Diferensial
+  - [Metode Euler](Modul08/08-1-Metode-Euler.ipynb)
 - Modul 9: Transformasi Fourier
 - Modul 10: Pembelajaran Mesin
